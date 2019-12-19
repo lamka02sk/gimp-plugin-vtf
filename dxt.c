@@ -96,7 +96,7 @@ dxt5_to_rgba (void *rgb, int width, int height, void *dxt)
 			uint64_t idx = * (uint64_t *) (dxt + 2);
 			for (i = 0; i < 4; i++) {
 				for (j = 0; j < 4; j++) {
-					out[((y+i) * width + (x+j)) * 4 + 3] = (uint8_t) a[idx & 7];
+					out[((y+i) * width + (x+j)) * 4 + 3] = (uint8_t) 255;//a[idx & 7];
 					idx >>= 3;
 				}
 			}
